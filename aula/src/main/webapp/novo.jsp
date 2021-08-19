@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Teste aula</title>
-<p> Testando novo projeto de Programação Web <p>
+<p> Testando novo projeto de Programação Weeb <p>
 </head>
 <body>
 
