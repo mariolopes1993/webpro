@@ -8,6 +8,10 @@
 <p> Testando novo projeto de Programação Weeb <p>
 </head>
 <body>
-
+	<a href="ServletQualMeuNome">Qual meu nome?</a><br><br>
+	<form action="ServletQualMeuNome" method="post">
+		<input type="submit" value="POST">
+	
+	</form>
 </body>
 </html>
