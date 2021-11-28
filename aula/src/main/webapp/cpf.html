@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Aula de JavaScript</title>
+
+<script type="text/javascript">
+
+
+	const input = document.querySelector('input')
+	input.addEventListener('keypress', () => {
+		let inputlength = input.value.length
+		if (inputlength === 3 || inputlength === 7){
+			input.value += '.'
+		}else if (inputlength === 11) {
+			input.value += '-'
+		}
+	})
+
+	
+</script>
+
+</head>
+<body>
+
+	<input type="text" autocomplete="off" maxlength="14"/>
+
+	
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
