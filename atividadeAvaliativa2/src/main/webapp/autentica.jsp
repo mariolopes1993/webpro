@@ -7,9 +7,10 @@
 		<title>Login</title>
 	</head>
 	<body>
-		<form action="ServletLogin" method="post">
+		<form action="ServletLogin" method="post">         <%-- Tela para realizar login e mandar para o pacote login --%>
 			<td><input type="text" name="usuario"/></td><br>
 			<td><input type="password" name="senha"/></td>
+			
 			<input type="submit" value="Login">
 		</form>
 </body>

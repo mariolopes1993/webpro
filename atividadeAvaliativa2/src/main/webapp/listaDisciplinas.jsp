@@ -19,13 +19,13 @@
 	</tr>
 	<% 
 	
-	List<cadastrarDiscipl> disciplinas = (List<cadastrarDiscipl>) request.getAttribute("lista");
+	List<cadastrarDiscipl> disciplinas = (List<cadastrarDiscipl>) request.getAttribute("lista"); //atributos pegos da lista (nome da disciplina e nota)
 		for(cadastrarDiscipl cadi : disciplinas){			
 		
 	%>
 	<tr>
-		<td><%=cadi.getNomeDi() %> </td><br/>
-		<td><%=cadi.getNota1() %> </td><br/>
+		<td><%=cadi.getNomeDi() %> </td><br/>        
+		<td><%=cadi.getNota1() %> </td><br/>      
 		<td><%=cadi.getSituacao() %> </td><br/>
 	</tr>
 	<%
@@ -33,11 +33,11 @@
 	%>
 </table>	
 	<form>
-	<a href="cadastroDisciplinas.jsp">Voltar</a><br><br>
+	<a href="cadastroDisciplinas.jsp">Voltar</a><br><br>   <!-- link para voltar aa página cadastro -->
 	
 	</form>
-		<jsp:include page="header.jsp">
-    <jsp:param name="teste" value="Parâmetro de teste" />
+		<jsp:include page="header.jsp">                     
+    <jsp:param name="teste" value="Parâmetro de teste" /> 
 </jsp:include>
 </body>
 </html>

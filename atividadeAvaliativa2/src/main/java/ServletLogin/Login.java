@@ -11,31 +11,26 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
+
 @WebServlet("/ServletLogin")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 
-
     public Login() {
         super();
         
-
     }
     
-    public static final String USUARIO = "usuario";
+    public static final String USUARIO = "usuario";    
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		
@@ -43,17 +38,21 @@ public class Login extends HttpServlet {
 		
 		resposta.write("<html><body> ");
 		
-		String nomeUser = request.getParameter(USUARIO);
-		String senhaUser = request.getParameter("senha");
-		String redirecionar = "menu.jsp";
+		
+		String nomeUser = request.getParameter(USUARIO);        //  Captura o nome de usuário	
+		String senhaUser = request.getParameter("senha");		//  Captura a senha digitada
 		
 		
-		if (autentica(nomeUser, senhaUser)) {
+		
+		String redirecionar = "menu.jsp";              ////Direciona para a pagina de login
+		
+		
+		if (autentica(nomeUser, senhaUser)) {             //verifica se 
 			HttpSession sessao = request.getSession();
 			sessao.setAttribute(USUARIO, nomeUser);
-			//resposta.write("Bem vindo " + nomeUser);
 
-			request.getRequestDispatcher(redirecionar).forward(request, response);
+
+			request.getRequestDispatcher(redirecionar).forward(request, response);   // Redirecionar paagina
 			
 		}else {
 			resposta.write("Usuário ou senha inválidos");
@@ -64,8 +63,8 @@ public class Login extends HttpServlet {
 		resposta.write("</body> </html>");
 	}
 
-	private boolean autentica(String usuario, String senha) {
-		// TODO Auto-generated method stub
+	private boolean autentica(String usuario, String senha) {                   // Dados do usuário para realizar o login
+
 		if (usuario != null && usuario.equals("professor") && senha != null && senha.equals("Progweb2021")) {
 			return true;
 		}

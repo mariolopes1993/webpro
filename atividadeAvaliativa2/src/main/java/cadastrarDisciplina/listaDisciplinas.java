@@ -7,7 +7,7 @@ import java.util.List;
 
 public class listaDisciplinas {
 	
-	private List<cadastrarDiscipl> disciplinas = new ArrayList<cadastrarDiscipl>();
+	private List<cadastrarDiscipl> disciplinas = new ArrayList<cadastrarDiscipl>();   //lista de disciplinas
 	
 	public void addi(cadastrarDiscipl x) {
 		disciplinas.add(x);

@@ -4,12 +4,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="ISO-8859-1">
+		<meta charset="ISO-8859-1">  
 		<title>Data e hora</title>
 	</head>
 	<body>	
 Bem vindo!<br><br>
 
- <%=Data.horaAtual() %>
+ <%=Data.horaAtual() %>    <%-- Data e hora vindos da classe data --%>
 	</body>
 </html>

@@ -7,13 +7,13 @@
 <title>Cadastro disciplinas e nota</title>
 </head>
 <body>
-	<h2> Cadastro de disciplinas e nota</h2>
+	<h2> Cadastro de disciplinas e nota</h2>                       <%-- Tela para cadastrar as disciplinas e notas --%>
 	<form action="control" method="post">
 		<input type="hidden" name="ac" value="confirmarCadastro">
 		Nome da disciplina: <input type="text" id="addDisciplina" name="nomeDi"><br>
-		Nota: <input type="text" id="nota" name="nota1"><br>
+		Nota: <input type="text" id="nota" name="nota1"><br>       
 		
-		<input type="submit" value="Cadastrar">
+		<input type="submit" value="Cadastrar">						 <%-- Quando clicar no botão cadastrar enviar os dados para a control.java --%>
 	</form>
 	<a href="control">Voltar</a><br><br>
 

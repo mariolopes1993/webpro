@@ -35,14 +35,14 @@ public class control extends HttpServlet {
 			resposta = "cadastroDisciplinas.jsp";
 			
 		} else if ("confirmarCadastro".equals(ac)) {
-			cadastrarDiscipl x = new cadastrarDiscipl();
-			x.setNomeDi(request.getParameter("nomeDi"));
+			cadastrarDiscipl x = new cadastrarDiscipl();   //objeto criado da classe cadastrarDiscipl
+			x.setNomeDi(request.getParameter("nomeDi"));    // parametros recebidos da pagina de cadastro de disciplinas JSP
 			x.setNota1(request.getParameter("nota1"));
 			x.setSituacao(request.getParameter("nota1"));
 			
 		
 			
-			sis.addi(x);
+			sis.addi(x);                                ///lista de disciplinas
 			
 			request.setAttribute("lista", sis.listarDi());
 			resposta = "listaDisciplinas.jsp";
@@ -52,7 +52,7 @@ public class control extends HttpServlet {
 			resposta = "listaDisciplinas.jsp";
 		}
 		
-		request.getRequestDispatcher(resposta).forward(request, response);
+		request.getRequestDispatcher(resposta).forward(request, response);    //redirecionar página
 		
 	}
 
